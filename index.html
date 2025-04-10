@@ -947,46 +947,123 @@
         </div>
     </section>
 
-  <!-- Contact Form Section 
-   
-<section id="contact" class="py-24 bg-gray-900">
-  <div class="container mx-auto px-8">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold mb-4">Get In <span class="gradient-text">Touch</span></h2>
-      <p class="text-gray-300 max-w-3xl mx-auto">
-        Have questions or want to learn more about Digital Mind Collective? Reach out to us!
-      </p>
-      <div class="section-divider"></div>
-    </div>
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-24 bg-gray-900">
+        <div class="container mx-auto px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Get In <span class="gradient-text">Touch</span></h2>
+                <p class="text-gray-300 max-w-3xl mx-auto">
+                    Have questions or want to learn more about Digital Mind Collective? Reach out to us!
+                </p>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-10">
+                <div class="md:w-1/2">
+                    <!-- Success Message -->
+                    <div id="form-success" class="form-status status-success">
+                        <div class="flex items-center">
+                            <i class="ri-check-line text-2xl mr-3"></i>
+                            <p>Your message has been sent successfully! We'll get back to you soon.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Error Message -->
+                    <div id="form-error" class="form-status status-error">
+                        <div class="flex items-center">
+                            <i class="ri-error-warning-line text-2xl mr-3"></i>
+                            <p>There was an error sending your message. Please try again.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Loading Message -->
+                    <div id="form-loading" class="form-status status-loading">
+                        <div class="flex items-center">
+                            <div class="spinner mr-3"></div>
+                            <p>Sending your message...</p>
+                        </div>
+                    </div>
+                    
+                    <form id="contact-form">
+                        <!-- Hidden date field that will be auto-populated -->
+                        <input type="hidden" id="date" name="date">
+                        
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-300 mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" class="contact-input w-full" placeholder="John Doe" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-300 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" class="contact-input w-full" placeholder="john@example.com" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-300 mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" class="contact-input w-full" placeholder="How can we help?" required>
+                        </div>
+                        <div class="mb-8">
+                            <label for="message" class="block text-gray-300 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" class="contact-input w-full" placeholder="Your message here..." required></textarea>
+                        </div>
+                        <button type="submit" id="submit-btn" class="btn-primary px-8 py-4 rounded-lg font-medium text-center w-full shadow-lg">
+                            Send Message
+                        </button>
+                    </form>
+                    
+                    <!-- Replace with your Google Apps Script URL -->
+                    <div class="mt-4 text-sm text-gray-400">
+                        <p>To setup the form, replace the script URL in the JavaScript with your Google Apps Script URL.</p>
+                        <code class="bg-gray-800 px-2 py-1 rounded mt-2 block">var scriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_URL';</code>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="dark-card rounded-2xl p-10 h-full">
+                        <h3 class="text-2xl font-semibold mb-8">Connect With Us</h3>
+                        <div class="space-y-8">
+                            <div class="flex items-start">
+                                <div class="w-14 h-14 rounded-xl bg-blue-600 bg-opacity-10 flex items-center justify-center mr-5">
+                                    <i class="ri-mail-line text-2xl text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium">Email</h4>
+                                    <a href="/cdn-cgi/l/email-protection#8de9e4eae4f9ece1e0e4e3e9eee2e1e1e8eef9e4fbe8cdeae0ece4e1a3eee2e0" class="text-blue-400 hover:text-blue-300 transition-colors"><span class="__cf_email__" data-cfemail="d2b6bbb5bba6b3bebfbbbcb6b1bdbebeb7b1a6bba4b792b5bfb3bbbefcb1bdbf">[email&#160;protected]</span></a>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-14 h-14 rounded-xl bg-blue-600 bg-opacity-10 flex items-center justify-center mr-5">
+                                    <i class="ri-whatsapp-line text-2xl text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium">WhatsApp Community</h4>
+                                    <a href="https://chat.whatsapp.com/BEuZaweATZo1CdzJJ2QcZx" class="text-blue-400 hover:text-blue-300 transition-colors">Join Our WhatsApp Group</a>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-medium mb-5">Social Media</h4>
+                                <div class="flex flex-wrap gap-4">
+                                    <a href="https://www.facebook.com/profile.php?id=61570554308468" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/company/digital-mind-collective" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/digitalmindcollective/" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="http://www.youtube.com/@DigitalMindCollective" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-all">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                    <a href="https://x.com/D_M_Collective" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="flex flex-col md:flex-row gap-10">
-      <div class="md:w-1/2">
-        <<form action="https://script.google.com/macros/s/AKfycbwWW4kCb513lDyFJbK34cYGByEi3nu9RcCCDFfcUDcfDfAqXPKlG6DdfKgR0BL6Xy6K/exec" method="POST">
-            <div class="mb-6">
-                <label for="name" class="block text-gray-300 mb-2">Your Name</label>
-                <input type="text" id="name" name="name" class="contact-input w-full" placeholder="John Doe" required>
-            </div>
-            <div class="mb-6">
-                <label for="email" class="block text-gray-300 mb-2">Email Address</label>
-                <input type="email" id="email" name="email" class="contact-input w-full" placeholder="john@example.com" required>
-            </div>
-            <div class="mb-6">
-                <label for="subject" class="block text-gray-300 mb-2">Subject</label>
-                <input type="text" id="subject" name="subject" class="contact-input w-full" placeholder="How can we help?" required>
-            </div>
-            <div class="mb-8">
-                <label for="message" class="block text-gray-300 mb-2">Message</label>
-                <textarea id="message" name="message" rows="4" class="contact-input w-full" placeholder="Your message here..." required></textarea>
-            </div>
-            <button type="submit" class="btn-primary px-8 py-4 rounded-lg font-medium text-center w-full shadow-lg">
-                Send Message
-            </button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
--->
     <!-- CTA Section -->
     <section class="py-24 blue-bg relative overflow-hidden">
         <div class="absolute inset-0 opacity-10">
