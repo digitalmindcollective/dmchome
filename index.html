@@ -1322,7 +1322,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 .then(data => {
                     // Show success message
                     formLoading.style.display = 'none';
-                    formSuccess.style.display = 'block';
+                    document.getElementById('success-modal').classList.remove('hidden');
                     contactForm.reset();
                     submitBtn.disabled = false;
                     
@@ -1360,7 +1360,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 setTimeout(() => {
                     // Show success message
                     formLoading.style.display = 'none';
-                    formSuccess.style.display = 'block';
+                    document.getElementById('success-modal').classList.remove('hidden');
                     contactForm.reset();
                     submitBtn.disabled = false;
                     
@@ -1372,5 +1372,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             });
         }
     </script>
+
+<!-- Success Popup Modal -->
+<div id="success-modal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+  <div class="bg-dark-card text-white p-8 rounded-2xl shadow-xl text-center max-w-md mx-auto">
+    <h2 class="text-2xl font-bold mb-4 text-green-400">Message Sent Successfully!</h2>
+    <p class="mb-6 text-gray-300">Thank you for reaching out. You're one step closer to growing with us.</p>
+    <a href="https://join.digitalmindcollective.com" target="_blank" class="btn-primary px-6 py-3 rounded-lg font-semibold shadow hover:bg-red-primary transition-all inline-block">Join DMC Now</a>
+  </div>
+</div>
+
 </body>
 </html>
