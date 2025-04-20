@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Rules & Regulations | Digital Mind Collective</title>
+    <meta name="description" content="Guidelines and expectations for members of the Digital Mind Collective community. Learn about our core rules that ensure a productive and respectful environment.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+    <style>
+        :root {
+            --primary-blue: #1F7FFE;
+            --secondary-blue: #4F9BFA;
+            --light-yellow: #FFF5D0;
+            --primary-red: #FF5334;
+            --secondary-red: #FF2800;
+            --dark-red: #E31B11;
+            --bg-dark: #0a0e17;
+            --bg-navy: #111827;
+            --text-light: #f3f4f6;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+            color: white;
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            text-align: center;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(31, 127, 254, 0.2);
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-blue);
+            bottom: -5px;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .rule-card {
+            background-color: var(--bg-navy);
+            border-left: 4px solid var(--primary-blue);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .rule-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .rule-number {
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-blue));
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar-menu {
+                display: none;
+            }
+            
+            .navbar-menu.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background-color: var(--bg-navy);
+                padding: 1rem;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                z-index: 10;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-opacity-90 backdrop-filter backdrop-blur-lg fixed w-full top-0 z-50" style="background-color: rgba(10, 14, 23, 0.9);">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-white text-xl font-bold">Digital Mind Collective</a>
+                
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#" class="text-white hover:text-blue-400 transition nav-link">About</a>
+                    <a href="#" class="text-white hover:text-blue-400 transition nav-link">Programs</a>
+                    <a href="#" class="text-white hover:text-blue-400 transition nav-link">Founders</a>
+                    <a href="#" class="text-white hover:text-blue-400 transition nav-link">Testimonials</a>
+                    <a href="#" class="text-white hover:text-blue-400 transition nav-link">Events</a>
+                    <a href="#" class="text-white hover:text-blue-400 transition nav-link">Contact</a>
+                    <a href="https://join.digitalmindcollective.com" class="btn-primary">Join Community</a>
+                </nav>
+                
+                <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+                    <i class="bx bx-menu text-2xl"></i>
+                </button>
+            </div>
+            
+            <div class="navbar-menu md:hidden mt-4" id="mobile-menu">
+                <a href="#" class="block py-2 text-white hover:text-blue-400">About</a>
+                <a href="#" class="block py-2 text-white hover:text-blue-400">Programs</a>
+                <a href="#" class="block py-2 text-white hover:text-blue-400">Founders</a>
+                <a href="#" class="block py-2 text-white hover:text-blue-400">Testimonials</a>
+                <a href="#" class="block py-2 text-white hover:text-blue-400">Events</a>
+                <a href="#" class="block py-2 text-white hover:text-blue-400">Contact</a>
+                <a href="https://join.digitalmindcollective.com" class="btn-primary block text-center mt-4">Join Community</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-20 mt-10">
+        <!-- Hero Section -->
+        <section class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6" style="color: var(--light-yellow);">Community Rules & Regulations</h1>
+            <div class="w-24 h-1 bg-blue-500 mx-auto mb-8" style="background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));"></div>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">Our guidelines ensure that Digital Mind Collective remains a valuable, respectful space for all digital innovators.</p>
+        </section>
+
+        <!-- Introduction -->
+        <section class="mb-16 max-w-4xl mx-auto">
+            <div class="bg-gray-800 bg-opacity-50 p-6 md:p-8 rounded-lg shadow-lg">
+                <div class="flex items-center mb-6">
+                    <i class="bx bx-info-circle text-4xl mr-4" style="color: var(--primary-blue);"></i>
+                    <h2 class="text-2xl md:text-3xl font-semibold">Welcome to Digital Mind Collective</h2>
+                </div>
+                <p class="mb-4">A curated global community of digital innovators dedicated to learning, sharing, and growing together.</p>
+                <p class="mb-4">At DMC, we believe in creating an environment where members can benefit from collective knowledge and experience. To maintain the quality and integrity of our community, we've established the following guidelines.</p>
+                <p>These rules help ensure that our community remains a valuable resource for everyone involved.</p>
+            </div>
+        </section>
+
+        <!-- Core Guidelines -->
+        <section class="mb-16 max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">📝 CORE GUIDELINES 📝</h2>
+            
+            <div class="rule-card">
+                <div class="flex items-start">
+                    <div class="rule-number">1</div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Language Policy</h3>
+                        <p>English is our primary language for effective communication. This ensures all members can participate in discussions and benefit from shared knowledge.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="rule-card">
+                <div class="flex items-start">
+                    <div class="rule-number">2</div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Respect For All</h3>
+                        <p>Respect all members. We have zero tolerance for harassment, discrimination, or disrespectful behavior of any kind. Treat others as you would like to be treated.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="rule-card">
+                <div class="flex items-start">
+                    <div class="rule-number">3</div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Content Quality</h3>
+                        <p>No spam, unsolicited promotions, or irrelevant content. All posts should add value to the community and be relevant to our focus areas.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="rule-card">
+                <div class="flex items-start">
+                    <div class="rule-number">4</div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Knowledge Sharing</h3>
+                        <p>Share valuable insights and resources with the community. Your expertise could be exactly what another member needs to overcome a challenge.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="rule-card">
+                <div class="flex items-start">
+                    <div class="rule-number">5</div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Collaborative Growth</h3>
+                        <p>Ask questions and seek advice - we grow together. Don't hesitate to reach out when you need help or have questions about digital topics.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="rule-card">
+                <div class="flex items-start">
+                    <div class="rule-number">6</div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Conflict Resolution</h3>
+                        <p>Handle conflicts privately first; escalate to admins only when necessary. Direct communication often resolves misunderstandings quickly and effectively.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="rule-card">
+                <div class="flex items-start">
+                    <div class="rule-number">7</div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Direct Messaging</h3>
+                        <p>No DM spamming or unsolicited messages to members. Respect others' privacy and only send direct messages when appropriate and welcome.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="rule-card">
+                <div class="flex items-start">
+                    <div class="rule-number">8</div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Admin Guidance</h3>
+                        <p>Follow admin instructions for a positive community experience. Our admins work to ensure the community operates smoothly for everyone's benefit.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="rule-card">
+                <div class="flex items-start">
+                    <div class="rule-number">9</div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Introduction Requirement</h3>
+                        <p>If a new user doesn't introduce themselves in the group within 48 hours of joining, they will be removed. Introductions help us all get to know each other and foster a sense of community.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Important Notice -->
+        <section class="mb-16 max-w-4xl mx-auto">
+            <div class="bg-red-900 bg-opacity-20 border-l-4 border-red-500 p-6 md:p-8 rounded-lg">
+                <h2 class="text-2xl font-bold mb-4 flex items-center">
+                    <i class="bx bx-error-circle text-red-500 mr-3 text-3xl"></i>
+                    IMPORTANT NOTICE
+                </h2>
+                <div class="space-y-4">
+                    <p>This is a managed community, not an open one. Active participation in discussions is mandatory. Inactive members will be removed.</p>
+                    <p>We value quality over quantity - our focus is on meaningful engagement, not member count.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why These Rules Matter -->
+        <section class="mb-16 max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold mb-6">Why These Rules Matter</h2>
+            <div class="bg-gray-800 bg-opacity-50 p-6 md:p-8 rounded-lg shadow-lg">
+                <p class="mb-4">Our community rules are designed to create an environment where:</p>
+                <ul class="list-disc pl-6 mb-6 space-y-2">
+                    <li>Everyone feels respected and valued</li>
+                    <li>Knowledge and expertise are freely shared</li>
+                    <li>Content remains relevant and high-quality</li>
+                    <li>Members actively participate and contribute</li>
+                    <li>Connections are genuine and meaningful</li>
+                </ul>
+                <p>By following these guidelines, you help make Digital Mind Collective a thriving, valuable community for digital professionals worldwide.</p>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="text-center mb-16 pt-8">
+            <h2 class="text-3xl font-bold mb-6">Ready to Join Our Community?</h2>
+            <p class="max-w-2xl mx-auto mb-8 text-lg">Become part of a global network of digital innovators who share insights, collaborate on projects, and help each other grow professionally.</p>
+            <a href="https://join.digitalmindcollective.com" class="btn-primary text-lg px-12 py-4">Join DMC Now</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Digital Mind Collective</h3>
+                    <p class="mb-4 text-gray-400">A digital learners community sharing values, opportunities, and collaborations to empower growth and innovation.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="bx bxl-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="bx bxl-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="bx bxl-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="bx bxl-youtube text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="bx bxl-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Programs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Founders</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Events</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Programs</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">DMC Growth Catalyst</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">DMC Community Sessions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">DMC Core</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">DMC Upgrade</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">DMC Evolve</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Contact</h3>
+                    <p class="text-gray-400 mb-2">
+                        <i class="bx bx-envelope mr-2"></i>
+                        <a href="mailto:digitalmindcollective@gmail.com" class="hover:text-white transition">digitalmindcollective@gmail.com</a>
+                    </p>
+                    <p class="text-gray-400">
+                        <i class="bx bx-globe mr-2"></i>
+                        <a href="https://www.digitalmindcollective.com" class="hover:text-white transition">www.digitalmindcollective.com</a>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-center text-gray-600">© 2025 Digital Mind Collective. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('active');
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('bx-menu')) {
+                icon.classList.remove('bx-menu');
+                icon.classList.add('bx-x');
+            } else {
+                icon.classList.remove('bx-x');
+                icon.classList.add('bx-menu');
+            }
+        });
+        
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
