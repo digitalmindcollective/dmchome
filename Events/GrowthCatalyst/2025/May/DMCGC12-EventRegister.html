@@ -689,9 +689,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     loadingIndicator.classList.add('hidden');
     showPopup('Registration successful! We\'ll add you to the WhatsApp group once Selected. Send a Join Request', '✅');
 
-    setTimeout(() => {
-        submitBtn.classList.remove('hidden');
-    }, 5000);
+   // Add a delay before redirect to allow users to see the success message
+   setTimeout(() => {
+        window.location.href = 'https://chat.whatsapp.com/DHtHLEthWnf5GqUMn30URT';
+    }, 2000); // 3 seconds delay before redirect
 });
             });
         });
