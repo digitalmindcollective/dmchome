@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate - Digital Mind Collective</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --navy-blue: #0f172a;
+            --dark-blue: #1F1F2F;
+            --primary-blue: #1F7FFE;
+            --light-blue: #4F9BFA;
+            --cream: #FFF5D0;
+            --orange-red: #FF5334;
+            --bright-red: #FF2800;
+            --deep-red: #E31B11;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--navy-blue);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #1F7FFE 0%, #9C27B0 50%, #FF5334 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .header {
+            background-color: #0c1222;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: #fff;
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #1869ca;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(31, 127, 254, 0.4);
+        }
+        
+        .btn-secondary {
+            background-color: var(--orange-red);
+            color: #fff;
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #e6442c;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 83, 52, 0.4);
+        }
+        
+        .certificate-container {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .certificate-image {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+        
+        .details-item {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .details-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        
+        .social-btn {
+            background-color: rgba(255,255,255,0.1);
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-btn:hover {
+            background-color: var(--primary-blue);
+            transform: translateY(-3px);
+        }
+        
+        .social-btn-linkedin:hover {
+            background-color: #0077B5;
+        }
+        
+        .social-btn-whatsapp:hover {
+            background-color: #25D366;
+        }
+        
+        .social-btn-twitter:hover {
+            background-color: #1DA1F2;
+        }
+        
+        .social-btn-instagram:hover {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        }
+        
+        .social-btn-download:hover {
+            background-color: #4CAF50;
+        }
+        
+        .verify-badge {
+            background: linear-gradient(45deg, #1F7FFE, #4F9BFA);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .mentor-card {
+            background: rgba(31, 127, 254, 0.1);
+            border: 1px solid rgba(31, 127, 254, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .mentor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(31, 127, 254, 0.2);
+        }
+        
+        .mentor-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-blue);
+        }
+        
+        .course-info-card {
+            background: rgba(255, 83, 52, 0.1);
+            border: 1px solid rgba(255, 83, 52, 0.3);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .course-info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 83, 52, 0.2);
+        }
+        
+        .share-container {
+            background: linear-gradient(to right, rgba(31, 127, 254, 0.1), rgba(156, 39, 176, 0.1), rgba(255, 83, 52, 0.1));
+            border-radius: 10px;
+            padding: 1.5rem;
+        }
+        
+        footer {
+            background-color: #0c1222;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .certificate-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header py-4">
+        <div class="container mx-auto px-4 flex items-center justify-between">
+            <div class="flex items-center">
+                <div class="text-xl font-bold">
+                    <a href="#" class="text-white">Digital Mind Collective</a>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#" class="text-white hover:text-gray-300 transition-colors">About</a>
+                <a href="#" class="text-white hover:text-gray-300 transition-colors">Programs</a>
+                <a href="#" class="text-white hover:text-gray-300 transition-colors">Founders</a>
+                <a href="#" class="text-white hover:text-gray-300 transition-colors">Testimonials</a>
+                <a href="#" class="text-white hover:text-gray-300 transition-colors">Events</a>
+                <a href="#" class="text-white hover:text-gray-300 transition-colors">Contact</a>
+                <a href="#" class="btn-primary ml-4">Join Community</a>
+            </nav>
+            <button class="md:hidden text-white">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Certificate Section -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="text-center mb-12">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">Certificate of Completion</h1>
+            <p class="text-gray-400 max-w-2xl mx-auto">This digital certificate verifies the successful completion of a DMC Growth Catalyst session by the participant.</p>
+        </div>
+        
+        <!-- Certificate Display -->
+        <div class="flex flex-col lg:flex-row gap-8 mb-16">
+            <div class="lg:w-3/5">
+                <div class="certificate-container">
+                    <img src="https://join.digitalmindcollective.com/certificates/DMCGC04/src/DMCGC25030208.png" alt="DMC Growth Catalyst Certificate" class="certificate-image">
+                </div>
+            </div>
+            
+            <div class="lg:w-2/5">
+                <div class="bg-gray-900 bg-opacity-50 p-6 rounded-lg h-full">
+                    <h2 class="text-2xl font-bold mb-6 pb-4 border-b border-gray-700">Certificate Details</h2>
+                    
+                    <div class="details-item">
+                        <p class="text-gray-400 text-sm">Participant</p>
+                        <p class="text-xl font-medium">Mohammed Fahad</p>
+                    </div>
+                    
+                    <div class="details-item">
+                        <p class="text-gray-400 text-sm">Course Completed</p>
+                        <p class="text-xl font-medium">DMCGCS4 - Basics of Re-Targeting in Meta Ads</p>
+                    </div>
+                    
+                    <div class="details-item">
+                        <p class="text-gray-400 text-sm">Completion Date</p>
+                        <p class="text-xl font-medium">15-03-2025</p>
+                    </div>
+                    
+                    <div class="details-item">
+                        <p class="text-gray-400 text-sm">Certificate ID</p>
+                        <p class="text-xl font-medium">DMCGC25030208</p>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <div class="verify-badge mb-4">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Verified Authentic</span>
+                        </div>
+                        
+                        <p class="text-gray-300 text-sm mb-6">
+                            This certificate can be verified by its unique ID. All DMC certificates include a digital signature that ensures authenticity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Course Details & Mentor Profile -->
+        <div class="flex flex-col lg:flex-row gap-8 mb-16">
+            <!-- Course Details Section -->
+            <div class="lg:w-1/2">
+                <div class="course-info-card p-6">
+                    <h2 class="text-2xl font-bold mb-6 pb-4 border-b border-red-800">Course Information</h2>
+                    
+                    <div class="details-item">
+                        <p class="text-gray-400 text-sm">Course Mode</p>
+                        <p class="text-xl font-medium flex items-center gap-2">
+                            <i class="fas fa-laptop text-orange-400"></i> Online
+                        </p>
+                    </div>
+                    
+                    <div class="details-item">
+                        <p class="text-gray-400 text-sm">Course Subject</p>
+                        <p class="text-xl font-medium">Digital Marketing: Advanced Re-Targeting Strategies</p>
+                    </div>
+                    
+                    <div class="details-item">
+                        <p class="text-gray-400 text-sm">Session Date & Time</p>
+                        <p class="text-xl font-medium flex items-center gap-2">
+                            <i class="far fa-calendar-alt text-orange-400"></i> March 15, 2025 | 7:00 PM - 9:00 PM IST
+                        </p>
+                    </div>
+                    
+                    <div class="details-item">
+                        <p class="text-gray-400 text-sm">Duration</p>
+                        <p class="text-xl font-medium">2 Hours</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mentor Profile Section -->
+            <div class="lg:w-1/2">
+                <div class="mentor-card p-6">
+                    <h2 class="text-2xl font-bold mb-6 pb-4 border-b border-blue-800">Mentor Profile</h2>
+                    
+                    <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <img src="https://join.digitalmindcollective.com/src/dark.png" alt="Mentor Photo" class="mentor-image">
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-1">Sourav Dev</h3>
+                            <p class="text-blue-400 mb-3">Senior Performance Marketing Strategist</p>
+                            
+                            <p class="text-gray-300 mb-4">
+                                Expert in digital advertising strategies with over 8 years of experience in performance marketing and re-targeting campaigns across multiple platforms.
+                            </p>
+                            
+                            <div class="flex gap-3">
+                                <a href="#" class="social-btn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-btn">
+                                    <i class="fas fa-globe"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Share Certificate Section -->
+        <div class="share-container mb-16">
+            <h2 class="text-2xl font-bold mb-6 text-center">Share Your Achievement</h2>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-medium mb-4 text-center">Share now in:</h3>
+                
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#" class="social-btn social-btn-linkedin" title="Share on LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-btn social-btn-whatsapp" title="Share on WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="social-btn social-btn-twitter" title="Share on X (Twitter)">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-btn social-btn-instagram" title="Share on Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-btn social-btn-download" title="Download Certificate">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <p class="text-gray-300 mb-4">Showcase your new skills and knowledge with your professional network</p>
+                <button class="btn-primary">
+                    <i class="fas fa-share-alt mr-2"></i> Share Certificate
+                </button>
+            </div>
+        </div>
+        
+        <!-- About the Certification -->
+        <div class="bg-gray-900 bg-opacity-50 rounded-lg p-8 mb-16">
+            <h2 class="text-2xl font-bold mb-4">About DMC Growth Catalyst Certification</h2>
+            
+            <p class="mb-4 text-gray-300">
+                The DMC Growth Catalyst Certification is awarded to participants who fully attend the training sessions and complete the assigned tasks, verified by a mentor. This community-driven program by Digital Mind Collective (DMC) aims to develop high-quality digital professionals through hands-on learning and expert guidance.
+            </p>
+            
+            <p class="mb-4 text-gray-300">
+                Each certification represents mastery of specific digital marketing and professional skills, validated by industry experts and community mentors. Recipients have demonstrated practical knowledge and application in their chosen area of focus.
+            </p>
+            
+            <h3 class="text-xl font-semibold mt-8 mb-3">Verification Process</h3>
+            
+            <p class="text-gray-300">
+                All DMC certificates include a unique identifier and can be verified through our certificate verification system. The certification indicates that the participant has:
+            </p>
+            
+            <ul class="list-disc pl-6 mt-3 mb-6 text-gray-300">
+                <li class="mb-2">Attended the complete session</li>
+                <li class="mb-2">Demonstrated understanding of the subject matter</li>
+                <li class="mb-2">Completed any required assignments or tasks</li>
+                <li class="mb-2">Received mentor validation of their knowledge</li>
+            </ul>
+            
+            <div class="flex justify-center mt-8">
+                <a href="#" class="btn-secondary">View More Courses</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <p class="text-white font-bold text-lg">Digital Mind Collective</p>
+                    <p class="text-gray-400 text-sm mt-2">Where Digital Minds Converge, Innovate & Grow</p>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-4 mb-6 md:mb-0">
+                    <a href="#" class="text-gray-400 hover:text-white">About</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Programs</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Events</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Join Community</a>
+                </div>
+                
+                <div class="flex gap-4">
+                    <a href="#" class="social-btn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-btn">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-btn">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-btn">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-500 text-sm">© 2025 Digital Mind Collective. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
